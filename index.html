@@ -88,20 +88,22 @@
           </div>
         </main>
         <!-- Modal for Adding/Editing Tasks -->
-          <div id="task-modal">
-            <h2> Task</h2>
-            <label for="task-title">Title</label>
-            <input id="task-title"/>
-            <label for="task-desc">Description</label>
-            <textarea id="task-desc"></textarea>
-            <label for="task-status">Status</label>
-            <select id="task-status">
-                <option value="todo">TODO</option>
-                <option value="doing">DOING</option>
-                <option value="done">DONE</option>
+          <dialog id="task-modal">
+            <div class="modal-header">
+              <h3 id="modal-h3"> Task</h3>
+              <button id="close-task-btn" aria-label="Close">&times;</button>
+            </div>
+            <label class="modal-label" for="task-title">Title</label>
+            <input class="modal-input" id="task-title"/>
+            <label class="modal-label" for="task-desc">Description</label>
+            <textarea class="modal-input" id="task-desc" rows="4"></textarea>
+            <label class="modal-label" for="task-status">Status</label>
+            <select class="modal-input" id="task-status">
+                <option value="todo">Todo</option>
+                <option value="doing">Doing</option>
+                <option value="done">Done</option>
             </select>
-            <button id="close-task-btn">Save Task</button>
-          </div>
+          </dialog>
       </div>
     </div>
   </body>

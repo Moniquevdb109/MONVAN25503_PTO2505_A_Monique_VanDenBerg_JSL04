@@ -218,12 +218,53 @@ h2 {
   background: #fff;
   color: #111827;
   width: 600px;
-  height: auto;
+  height: 415px;
   padding: 24px;
-  margin: auto;
+  margin: 40px auto;
   border-radius: 8px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25)
+}
 
+#modal-h3 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000112;
+
+}
+
+.modal-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #828FA3;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.modal-input{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #E4EBFA;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 20px;
+}
+#close-task-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  font-weight: bold;
+  color: #ef4444;
+  cursor: pointer;
+  transition: transform 0.15s ease, color 0.2s ease;
 }
 
 /* ========================

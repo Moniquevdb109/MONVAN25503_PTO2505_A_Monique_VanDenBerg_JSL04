@@ -43,9 +43,12 @@ function setupModalCloseHandler() {
     document.getElementById('close-modal-btn').addEventListener('click', () => modal.closest());
 }
 
-// 7. Initialise the Kanban board
+// 7. Added function to initialise the Kanban board
 function initKanbanBoard() {
     clearExistingTasks();
     renderTasks(initialTasks);
     setupModalCloseHandler();
 }
+
+// 8. Action Ini function after DOM content is loaded
+document.addEventListener('DOMContentLoaded', initKanbanBoard);

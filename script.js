@@ -50,5 +50,5 @@ function initKanbanBoard() {
     setupModalCloseHandler();
 }
 
-// 8. Action Ini function after DOM content is loaded
+// 8. Action Init function after DOM content is loaded
 document.addEventListener('DOMContentLoaded', initKanbanBoard);

@@ -37,8 +37,15 @@ function openTaskModal(task) {
     modal.showModal();
 }
 
-// Adding fuction to handel the close button
+// 6. Adding fuction to handel the close button
 function setupModalCloseHandler() {
     const modal = document.getElementById('task-modal');
     document.getElementById('close-modal-btn').addEventListener('click', () => modal.closest());
+}
+
+// 7. Initialise the Kanban board
+function initKanbanBoard() {
+    clearExistingTasks();
+    renderTasks(initialTasks);
+    setupModalCloseHandler();
 }

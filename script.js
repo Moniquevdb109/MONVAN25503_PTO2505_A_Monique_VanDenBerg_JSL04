@@ -1,6 +1,8 @@
 import { initialTasks } from './initialData.js';
 
-// 1. clear existing HTML before renderling columns
+/**
+ * Clear all task containers before re-rendering.
+ */
 function clearExistingTasks() {
     document.querySelectorAll('.tasks-container').forEach(c => c.innerHTML = '');
 }

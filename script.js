@@ -36,3 +36,9 @@ function openTaskModal(task) {
     document.getElementById('task-status').value = task.status;
     modal.showModal();
 }
+
+// Adding fuction to handel the close button
+function setupModalCloseHandler() {
+    const modal = document.getElementById('task-modal');
+    document.getElementById('close-modal-btn').addEventListener('click', () => modal.closest());
+}

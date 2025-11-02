@@ -2,7 +2,7 @@
 
 ## 💡 Overview
 
-This project focuses on building a **dynamic Kanban-style task board** that displays and manages tasks directly on the webpage. Tasks are **loaded from an initial dataset** and placed into **different columns** based on their current status (e.g., “To Do,” “In Progress,” “Done”). Each task is displayed as a clickable card that opens a **modal window** to view and edit its details.  
+This project focuses on building a **dynamic Kanban-style task board** that displays and manages tasks directly on the webpage. Tasks are **loaded from an initial dataset** and placed into **different columns** based on their current status (e.g., “To Do,” “Doing,” “Done”). Each task is displayed as a clickable card that opens a **modal window** to view and edit its details.  
 
 The project emphasizes **DOM manipulation**, **modular JavaScript structure**, and **comprehensive code documentation using JSDoc** for clarity, collaboration, and long-term maintainability.
 

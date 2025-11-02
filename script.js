@@ -1,3 +1,5 @@
+import { initialTasks } from './initialData.js';
+
 // 1. clear existing HTML before renderling columns
 function clearExistingTasks() {
     document.querySelectorAll('.task-container').forEach(c => c.innerHTML = '');
@@ -24,4 +26,13 @@ function renderTasks (task) {
         const container = getTaskContainerByStatus(task.status);
         if (container) container.appendChild (createTaskElement(task));
     })
+}
+
+// 5. Function to open the modal with task details
+function openTaskModal(task) {
+    const modal = document.getElementById('task-modal');
+    document.getElementById('task-title').value = task.title;
+    document.getElementById('task-desc').value = task.description;
+    document.getElementById('task-status').value = task.status;
+    modal.showModal();
 }

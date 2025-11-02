@@ -1,40 +1,33 @@
-# JSL04 Project Brief: Dynamic Task Display & Modal View
+## 📋Dynamic Kanban Task Board
 
-## Overview
+## 💡 Overview
 
-In this project, you will dynamically display tasks from the **given initial data** on the DOM using JavaScript. Tasks should be placed into the correct **Kanban board columns** based on their status, and clicking a task should open a **modal** where users can view and modify task details. The project emphasizes **DOM manipulation, event handling, modular JavaScript structure, and responsive UI implementation.**
+This project focuses on building a **dynamic Kanban-style task board** that displays and manages tasks directly on the webpage. Tasks are **loaded from an initial dataset** and placed into **different columns** based on their current status (e.g., “To Do,” “In Progress,” “Done”). Each task is displayed as a clickable card that opens a **modal window** to view and edit its details.  
 
-## Before You Begin
+The project emphasizes **DOM manipulation**, **modular JavaScript structure**, and **comprehensive code documentation using JSDoc** for clarity, collaboration, and long-term maintainability.
 
-**Check the project user stories in your student dashboard and the updated Figma Design** before you start building.
+---
 
-## Figma Design Link
+## 🚀 Key Objectives
 
-Check the updated Figma Design: [Figma Link](https://www.figma.com/design/y7bFCUYL5ZHfPeojACBXg2/Challenges-%7C-JSL?node-id=0-1&p=f&t=Ki0CZk0RAjrk9Fhs-0)
+### 🧠 Dynamic Task Display & Interaction
 
-## Key Objectives
+- Dynamically generate and display **task elements** from the initial data array.  
+- Automatically place each task card in the **correct Kanban column** based on its `status`.  
+- Enable **modal interaction**: clicking a task card opens a modal where users can view and edit details.  
+- Include **input fields** for task title and description within the modal.  
+- Provide a **status dropdown** for switching between different task states.  
+- Implement a **close button** in the modal for a smooth user experience.
 
-### Dynamic Task Display & Interaction
+---
 
-- Dynamically generate **task elements** from the given initial data and insert them into the DOM.
-- Ensure tasks are placed in the **correct columns** ("To Do", "In Progress", "Done") based on their status.
-- Clicking a task should **open a modal** displaying its details.
-- The modal should include:
-  - **Editable input fields** for the task title and description.
-  - **A select dropdown** showing the current status with other status options available.
-  - **A close button** that allows users to exit the modal easily.
+## ⛏️ Tech Stack
 
-### Design & Responsiveness
+[![My Skills](https://skillicons.dev/icons?i=html,css,git,github,vscode,figma)](https://skillicons.dev)
 
-- Ensure the **modal matches the Figma design**, including a **backdrop effect** for focus.
-- Implement a **fully responsive modal** that works on both desktop and mobile devices.
+---
 
-### Code Structure & Maintainability
+## 🎯 Expected Outcome
 
-- Structure JavaScript using **modular, single-responsibility functions**.
-- Use **descriptive and meaningful variable and function names** for clarity.
-- Add **JSDoc comments** to major functions, describing their purpose, parameters, and return values for better documentation.
-
-## Expected Outcome
-
-A fully functional **dynamic task board** where tasks appear under the correct columns, and users can **open a modal to view/edit** task details. The project will follow **clean, well-documented, and maintainable code practices**, ensuring a professional and scalable implementation.
+A **fully functional, dynamic Kanban board** that displays, categorizes, and allows user interaction with tasks directly in the browser.  
+Each function and data type is clearly documented with **JSDoc annotations** to ensure that the codebase remains **readable, maintainable, and easy to extend**.

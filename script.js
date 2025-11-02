@@ -7,7 +7,12 @@ function clearExistingTasks() {
     document.querySelectorAll('.tasks-container').forEach(c => c.innerHTML = '');
 }
 
-// 2. render tasks to the columns based on their status
+/**
+ * Create an element representing a single task card.
+ *
+ * @param {Task} task - The task to render.
+ * @returns {HTMLDivElement} A <div> with class "task-div" and a click handler to open the modal.
+ */
 function createTaskElement(task) {
     const div = document.createElement('div');
     div.className = 'task-div';
@@ -16,13 +21,21 @@ function createTaskElement(task) {
     div.addEventListener('click',() => openTaskModal(task));
     return div;
 }
-// 3. Add tasks to their respective columns using their status
+
+/**
+ * Get the tasks-container inside the column matching a given status.
+ * @param {Status} status - The column status to look up.
+ * @returns {HTMLElement|null} The container element or null if nothing is found.
+ */
 function getTaskContainerByStatus(status) {
     const column = document.querySelector(`.column-div[data-status="${status}"]`);
     return column ? column.querySelector('.tasks-container') : null;
 }
 
-// 4. Main function to render all tasks
+/**
+ * Render all tasks into their respective columns.
+ * @param {Array} task - Array of task objects to render.
+ */
 function renderTasks (task) {
     task.forEach(task => {
         const container = getTaskContainerByStatus(task.status);
@@ -30,7 +43,10 @@ function renderTasks (task) {
     })
 }
 
-// 5. Function to open the modal with task details
+/**
+ * Open the modal populated with the given task's details.
+ * @param {Object} task - Object containing task information
+ */
 function openTaskModal(task) {
     const modal = document.getElementById('task-modal');
     document.getElementById('task-title').value = task.title;
@@ -39,18 +55,23 @@ function openTaskModal(task) {
     modal.showModal();
 }
 
-// 6. Adding fuction to handel the close button
+/**
+ * Sets up the modal's close button
+ */
 function setupModalCloseHandler() {
     const modal = document.getElementById('task-modal');
     document.getElementById('close-task-btn').addEventListener('click', () => modal.close());
 }
 
-// 7. Added function to initialise the Kanban board
+/**
+ * Initialises the Kanban board by clearing existing tasks, rendering initial tasks, and setting up modal handlers.
+ */
 function initKanbanBoard() {
     clearExistingTasks();
     renderTasks(initialTasks);
     setupModalCloseHandler();
 }
-
-// 8. Action Init function after DOM content is loaded
+/**
+ * Wait for the DOM to load before initializing the Kanban board.
+ */
 document.addEventListener('DOMContentLoaded', initKanbanBoard);

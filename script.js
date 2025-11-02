@@ -2,22 +2,22 @@ import { initialTasks } from './initialData.js';
 
 // 1. clear existing HTML before renderling columns
 function clearExistingTasks() {
-    document.querySelectorAll('.task-container').forEach(c => c.innerHTML = '');
+    document.querySelectorAll('.tasks-container').forEach(c => c.innerHTML = '');
 }
 
 // 2. render tasks to the columns based on their status
 function createTaskElement(task) {
-    const div = document.createElemennt('div');
+    const div = document.createElement('div');
     div.className = 'task-div';
     div.textContent = task.title;
-    div.dataset.taskId = taskId
+    div.dataset.taskId = task.Id
     div.addEventListener('click',() => openTaskModal(task));
     return div;
 }
 // 3. Add tasks to their respective columns using their status
 function getTaskContainerByStatus(status) {
     const column = document.querySelector(`.column-div[data-status="${status}"]`);
-    return column ? column.querySelector('.task-container') : null;
+    return column ? column.querySelector('.tasks-container') : null;
 }
 
 // 4. Main function to render all tasks
@@ -40,7 +40,7 @@ function openTaskModal(task) {
 // 6. Adding fuction to handel the close button
 function setupModalCloseHandler() {
     const modal = document.getElementById('task-modal');
-    document.getElementById('close-modal-btn').addEventListener('click', () => modal.closest());
+    document.getElementById('close-task-btn').addEventListener('click', () => modal.close());
 }
 
 // 7. Added function to initialise the Kanban board

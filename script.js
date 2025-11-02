@@ -12,8 +12,16 @@ function createTaskElement(task) {
     div.addEventListener('click',() => openTaskModal(task));
     return div;
 }
-// Add tasks to their respective columns using their status
+// 3. Add tasks to their respective columns using their status
 function getTaskContainerByStatus(status) {
     const column = document.querySelector(`.column-div[data-status="${status}"]`);
     return column ? column.querySelector('.task-container') : null;
+}
+
+// 4. Main function to render all tasks
+function renderTasks (task) {
+    task.forEach(task => {
+        const container = getTaskContainerByStatus(task.status);
+        if (container) container.appendChild (createTaskElement(task));
+    })
 }
